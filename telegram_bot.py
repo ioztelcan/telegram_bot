@@ -39,7 +39,6 @@ class TelegramBot():
         LIST_OF_ADMINS.append(int(user_id))
 
         self.bot = telegram.Bot(token=self.token)
-        self.bot.can_join_groups = True
         self.updater = Updater(token=self.token, use_context=True)
         self.dispatcher = self.updater.dispatcher
         self.dispatcher.add_error_handler(error)
