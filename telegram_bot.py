@@ -71,7 +71,7 @@ class TelegramBot():
         logger.debug("Removing error handler: {}".format(callback.__name__))
         self.dispatcher.remove_error_handler(callback)
 
-    def send_msg(self, msg, dest=None):
+    def send_msg(self, msg, dest=None, parse_mode=None):
         if dest == None:
             dest = self.user_id
         self.bot.send_message(dest, msg, parse_mode=parse_mode)
